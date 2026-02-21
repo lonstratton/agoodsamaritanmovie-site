@@ -8,31 +8,75 @@
 <meta name="description" content="A GOOD SAMARITAN — a contemporary noir short film. Coming soon.">
 <meta name="robots" content="noindex">
 
-<link rel="stylesheet" href="css/ags.css">
-</head>
+<style>
+:root {
+  --bg: #0a0b0d;
+  --text: #e6e6e6;
+  --muted: #7a7f86;
+  --red: #8b1e1e; /* restrained noir red */
+}
 
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-family: Georgia, "Times New Roman", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 500;
+  font-size: clamp(34px, 6vw, 72px);
+  line-height: 1.1;
+}
+
+h1 span {
+  color: var(--red);
+}
+
+.sub {
+  margin: 0 0 24px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.status {
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+</style>
+
+</head>
 <body>
 
-<header class="hero">
-  <div class="overlay"></div>
-
-  <div class="inner">
-    <h1>A GOOD SAMARITAN</h1>
-    <p class="sub">A Short Film</p>
-
-    <div class="divider"></div>
-
+<div class="wrapper">
+  <div>
+    <h1>
+      A GOOD <span>SAMARITAN</span>
+    </h1>
     <p class="status">Coming Soon</p>
   </div>
-</header>
-
-<footer>
-  © <span id="y"></span> A GOOD SAMARITAN
-</footer>
-
-<script>
-document.getElementById('y').textContent = new Date().getFullYear();
-</script>
+</div>
 
 </body>
 </html>
