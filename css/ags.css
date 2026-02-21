@@ -22,7 +22,7 @@ html, body {
   min-height: 100vh;
   display: grid;
   align-items: end;
-  background: url("/img/hero/hero.jpg") center center / cover no-repeat;
+  background: url("/img/poster.jpg") center center / cover no-repeat;
 }
 
 .overlay {
