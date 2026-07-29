@@ -1,3 +1,4 @@
+// ----- Navigation -----
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.getElementById("site-nav");
 
@@ -83,7 +84,7 @@ videoModal.addEventListener("click", e => {
     }
 });
 
-// ----- Keyboard -----
+// ----- Keyboard Shortcuts -----
 
 document.addEventListener("keydown", e => {
     if (e.key === "Escape") {
