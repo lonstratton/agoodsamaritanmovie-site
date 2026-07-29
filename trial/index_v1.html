@@ -11,7 +11,7 @@
 	<meta name="theme-color" content="#000000">
 
 	<link rel="canonical" href="https://agoodsamaritanmovie.com/">
-	<link rel="stylesheet" href="css/ags.css">
+	<link rel="stylesheet" href="css/site.css">
 	<link rel="icon" href="favicon.ico">
 
 	<!-- Open Graph -->
@@ -58,15 +58,7 @@
 	<main class="site-main">
 	<section id="film" class="featured-video" aria-label="A Good Samaritan film">
 		<div class="video-frame">
-			<img src="img/poster.jpg" alt="A GOOD SAMARITAN film poster"> 
-				<!-- Replace the image above with the Vimeo iframe when ready:
-				<iframe
-					src="https://player.vimeo.com/video/XXXXXXXX"
-					title="A GOOD SAMARITAN"
-					allow="autoplay; fullscreen; picture-in-picture"
-					allowfullscreen>
-				</iframe>
-				-->
+			<iframe src="https://player.vimeo.com/video/1212208625?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="A Good Samaritan | &quot;Crime Scene&quot;"></iframe>
 		</div>
 	</section>
 	<section class="film-intro" aria-label="film-title">
@@ -86,7 +78,7 @@
 	</section>
 	<section class="media-grid" aria-label="Trailer and film clip">
 		<article id="trailer" class="media-card">
-			<a href="https://player.vimeo.com/video/123456789" class="video-link" aria-label="Play official trailer"> 
+			<a href="https://player.vimeo.com/video/1210309892" class="video-link" aria-label="Play official trailer"> 
 			<div class="media-frame">
 				<img src="img/trailer.jpg" alt="Official trailer for A GOOD SAMARITAN"> 
 			</div>
@@ -261,7 +253,22 @@
 			</div>
 		</div>
 	</div>
+<div id="videoModal" class="modal" aria-hidden="true">
+    <div class="modal-content video-modal-content">
+        <button class="modal-close video-close"
+                type="button"
+                aria-label="Close video">CLOSE</button>
 
+        <div class="video-frame">
+            <iframe
+                id="videoFrame"
+                src=""
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
 <script src="js/scripts.js"></script>
 </body>
 </html>
