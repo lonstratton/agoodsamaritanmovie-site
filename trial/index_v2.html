@@ -101,6 +101,63 @@
 			<a href="https://www.threads.com/@polyfiremedia/" class="social threads" target="_blank" rel="noopener noreferrer"><span></span></a>
 			<a href="https://x.com/polyfiremedia" class="social x" target="_blank" rel="noopener noreferrer"><span></span></a>
 		</div>
+	</main><main id="top" class="site-main">
+	<section id="film" class="featured-video" aria-label="A Good Samaritan film">
+		<div class="video-frame">
+			<img src="img/poster.jpg" alt="A GOOD SAMARITAN film poster"> 
+				<!-- Replace the image above with the Vimeo iframe when ready:
+				<iframe
+					src="https://player.vimeo.com/video/XXXXXXXX"
+					title="A GOOD SAMARITAN"
+					allow="autoplay; fullscreen; picture-in-picture"
+					allowfullscreen>
+				</iframe>
+				-->
+		</div>
+	</section>
+	
+	<section class="film-intro" aria-label="film-title">
+		<h1 id="film-title">
+			A GOOD SAMARITAN
+		</h1>
+		<p class="genre">
+			Crime | Neo-Noir | Thriller
+		</p>
+		<p>
+			A detective tracks down a killer of homeless people on the streets of Detroit.
+		</p>
+		<p>
+			<strong>A Ryan Stratton film. Based on the short story by Charles Ardai</strong><br>
+			Starring <strong>Chris Newman, Julie Kline,</strong> and <strong>Dan Pesta</strong> 
+		</p>
+	</section>
+	
+	<section class="media-grid" aria-label="Trailer and film clip">
+		
+		<article id="trailer" class="media-card">
+			<a href="https://player.vimeo.com/video/123456789" class="video-link" aria-label="Play official trailer"> 
+			<div class="media-frame">
+				<img src="img/trailer.jpg" alt="Official trailer for A GOOD SAMARITAN"> 
+			</div>
+			</a> 
+		</article>
+		
+		<article id="clip" class="media-card">
+			<a href="https://player.vimeo.com/video/123456789" class="video-link" aria-label="Play film clip"> 
+			<div class="media-frame">
+				<img src="img/clip.jpg" alt="Official trailer for A GOOD SAMARITAN"> 
+			</div>
+			</a> 
+		</article>
+		
+	</section>
+	
+	<div class="social-links" aria-label="Social media">
+		<a href="https://www.facebook.com/profile.php?id=100090668301949" class="social fb" target="_blank" rel="noopener noreferrer"><span></span></a> 
+		<a href="https://www.instagram.com/polyfiremedia/" class="social ig" target="_blank" rel="noopener noreferrer"><span></span></a> 
+		<a href="https://www.threads.com/@polyfiremedia/" class="social threads" target="_blank" rel="noopener noreferrer"><span></span></a> 
+		<a href="https://x.com/polyfiremedia" class="social x" target="_blank" rel="noopener noreferrer"><span></span></a> 
+	</div>
 	</main>
 
 	<div id="creditsModal" class="modal" aria-hidden="true">
@@ -148,59 +205,107 @@
 	</div>
 
 	<script>
-		const navToggle = document.querySelector(".nav-toggle");
-		const siteNav = document.getElementById("site-nav");
-		const modal = document.getElementById("creditsModal");
-		const creditsLink = document.getElementById("credits-link");
-		const modalClose = document.querySelector(".modal-close");
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.getElementById("site-nav");
 
-		function closeMenu() {
-			siteNav.classList.remove("open");
-			navToggle.setAttribute("aria-expanded", "false");
-			navToggle.setAttribute("aria-label", "Open menu");
-		}
+const modal = document.getElementById("creditsModal");
+const creditsLink = document.getElementById("credits-link");
+const modalClose = document.querySelector("#creditsModal .modal-close");
 
-		navToggle.addEventListener("click", () => {
-			const isOpen = siteNav.classList.toggle("open");
-			navToggle.setAttribute("aria-expanded", String(isOpen));
-			navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-		});
+const videoModal = document.getElementById("videoModal");
+const videoFrame = document.getElementById("videoFrame");
+const videoClose = document.querySelector(".video-close");
 
-		siteNav.querySelectorAll("a").forEach(link => {
-			link.addEventListener("click", closeMenu);
-		});
+function closeMenu() {
+    siteNav.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Open menu");
+}
 
-		function openCredits() {
-			modal.classList.add("open");
-			modal.setAttribute("aria-hidden", "false");
-			document.body.classList.add("modal-open");
-			modalClose.focus();
-		}
+navToggle.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+});
 
-		function closeCredits() {
-			modal.classList.remove("open");
-			modal.setAttribute("aria-hidden", "true");
-			document.body.classList.remove("modal-open");
-			creditsLink.focus();
-		}
+siteNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+});
 
-		creditsLink.addEventListener("click", event => {
-			event.preventDefault();
-			openCredits();
-		});
+// ----- Credits Modal -----
 
-		modalClose.addEventListener("click", closeCredits);
+function openCredits() {
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    modalClose.focus();
+}
 
-		modal.addEventListener("click", event => {
-			if (event.target === modal) closeCredits();
-		});
+function closeCredits() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+    creditsLink.focus();
+}
 
-		document.addEventListener("keydown", event => {
-			if (event.key === "Escape") {
-				if (modal.classList.contains("open")) closeCredits();
-				closeMenu();
-			}
-		});
-	</script>
+creditsLink.addEventListener("click", e => {
+    e.preventDefault();
+    openCredits();
+});
+
+modalClose.addEventListener("click", closeCredits);
+
+modal.addEventListener("click", e => {
+    if (e.target === modal) {
+        closeCredits();
+    }
+});
+
+// ----- Video Modal -----
+
+document.querySelectorAll(".video-link").forEach(link => {
+    link.addEventListener("click", e => {
+        e.preventDefault();
+
+        videoFrame.src = link.href + "?autoplay=1";
+        videoModal.classList.add("open");
+        videoModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+        videoClose.focus();
+    });
+});
+
+function closeVideo() {
+    videoModal.classList.remove("open");
+    videoModal.setAttribute("aria-hidden", "true");
+    videoFrame.src = "";
+    document.body.classList.remove("modal-open");
+}
+
+videoClose.addEventListener("click", closeVideo);
+
+videoModal.addEventListener("click", e => {
+    if (e.target === videoModal) {
+        closeVideo();
+    }
+});
+
+// ----- Keyboard -----
+
+document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+
+        if (modal.classList.contains("open")) {
+            closeCredits();
+        }
+
+        if (videoModal.classList.contains("open")) {
+            closeVideo();
+        }
+
+        closeMenu();
+    }
+});
+</script>
 </body>
 </html>
