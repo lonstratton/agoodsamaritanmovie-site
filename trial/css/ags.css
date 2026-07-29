@@ -19,8 +19,7 @@ body {
 	margin: 0;
 	min-width: 320px;
 	background:
-		radial-gradient(circle at 50% 0%, rgba(255,255,255,.035), transparent 42rem),
-		var(--bg);
+		url("../img/background.jpg") center center / cover no-repeat fixed;
 	color: var(--text);
 	font-family: Georgia, "Times New Roman", serif;
 }
@@ -41,7 +40,7 @@ a {
 
 .site-header {
 	position: relative;
-	width: min(85%, 1100px);
+	width: min(85%, 3000px);
 	margin: 0 auto;
 	padding: clamp(1.75rem, 4vw, 3.5rem) 0 1.25rem;
 	display: flex;
@@ -143,7 +142,7 @@ a {
 }
 
 .site-main {
-	width: min(85%, 1100px);
+	width: min(85%, 3000px);
 	margin: 0 auto;
 	padding-bottom: 3rem;
 }
@@ -167,7 +166,7 @@ a {
 }
 
 .film-intro {
-    max-width: 700px;
+    max-width: 1000px;
     padding: 1.75rem 0 2rem;
 }
 
@@ -211,10 +210,10 @@ a {
 }
 
 .social-links img {
-    width: 2rem;
+    width: 1.7rem;
     height: auto;
     display: block;
-    opacity: .75;
+    opacity: .7;
     transition: opacity .2s ease, transform .2s ease;
 }
 
