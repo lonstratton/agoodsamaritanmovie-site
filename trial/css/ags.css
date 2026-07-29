@@ -354,7 +354,6 @@ a {
 
 .credit-role {
 	color: #9d9d9d;
-	text-transform: uppercase;
 	letter-spacing: .12em;
 	font-size: .82rem;
 }
@@ -362,6 +361,7 @@ a {
 .credit-name {
 	color: #f2f2f2;
 	font-size: 1rem;
+	text-transform: uppercase;
 }
 
 .credit-section {
