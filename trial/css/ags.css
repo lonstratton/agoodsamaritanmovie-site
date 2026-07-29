@@ -194,6 +194,16 @@ a {
 	gap: clamp(1rem, 3vw, 2rem);
 }
 
+.media-single {
+    display: flex;
+    justify-content: center;
+}
+
+.media-single .media-card {
+    width: 50%;
+    max-width: 1200px;
+}
+
 .social-links {
     display: flex;
     justify-content: flex-end;

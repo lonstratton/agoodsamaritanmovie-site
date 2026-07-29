@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>A GOOD SAMARITAN | Short Film</title>
+	<meta name="description" content="Official website for A GOOD SAMARITAN, a contemporary film noir short directed by Ryan Stratton.">
+	<meta name="robots" content="index,follow">
+	<meta name="author" content="Polyfire Media">
+	<meta name="theme-color" content="#000000">
+
+	<link rel="canonical" href="https://agoodsamaritanmovie.com/">
+	<link rel="stylesheet" href="css/ags.css">
+	<link rel="icon" href="favicon.ico">
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="A GOOD SAMARITAN">
+	<meta property="og:description" content="Official website for A GOOD SAMARITAN, a contemporary film noir short directed by Ryan Stratton.">
+	<meta property="og:url" content="https://agoodsamaritanmovie.com/">
+	<meta property="og:image" content="https://agoodsamaritanmovie.com/img/og-fb.jpg">
+	<meta property="og:site_name" content="A GOOD SAMARITAN">
+
+	<!-- X / Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="A GOOD SAMARITAN">
+	<meta name="twitter:description" content="Official website for A GOOD SAMARITAN, a contemporary film noir short directed by Ryan Stratton.">
+	<meta name="twitter:image" content="https://agoodsamaritanmovie.com/img/og-fb.jpg">
+	<meta name="twitter:site" content="https://x.com/polyfiremedia">
+	<meta name="twitter:creator" content="https://x.com/polyfiremedia">
+</head>
+
+<body>
+	<header class="site-header">
+		<a class="site-title" href="#top" aria-label="A Good Samaritan home">
+			<span>Polyfire Media</span> <em>presents</em>
+		</a>
+
+		<button class="nav-toggle"
+				type="button"
+				aria-controls="site-nav"
+				aria-expanded="false"
+				aria-label="Open menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+		<nav id="site-nav" class="site-nav" aria-label="Main navigation">
+			<a href="#" id="credits-link">Credits</a>
+			<a href="#trailer">Trailer</a>
+			<a href="#clip">Clip</a>
+			<a href="#film">Full Film</a>
+		</nav>
+	</header>
+
+	<main id="top" class="site-main">
+		<section id="film" class="featured-video" aria-label="A Good Samaritan film">
+			<div class="video-frame">
+				<img src="img/poster.jpg" alt="A GOOD SAMARITAN film poster">
+				<!-- Replace the image above with the Vimeo iframe when ready:
+				<iframe
+					src="https://player.vimeo.com/video/XXXXXXXX"
+					title="A GOOD SAMARITAN"
+					allow="autoplay; fullscreen; picture-in-picture"
+					allowfullscreen>
+				</iframe>
+				-->
+			</div>
+		</section>
+
+		<section class="film-intro" aria-label="film-title">
+			<h1 id="film-title">A GOOD SAMARITAN</h1>
+			<p class="genre">Crime | Neo-Noir | Thriller</p>
+			<p>A detective tracks down a killer of homeless people on the streets of Detroit.</p>
+			<p>
+				<strong>A Ryan Stratton film. Based on the short story by Charles Ardai</strong><br>
+				Starring <strong>Chris Newman, Julie Kline,</strong> and <strong>Dan Pesta</strong>
+			</p>
+		</section>
+
+		<div class="social-links" aria-label="Social media">
+			<a href="https://www.facebook.com/profile.php?id=100090668301949" aria-label="Facebook"><img src="img/fb.jpg"></a>
+			<a href="https://www.instagram.com/polyfiremedia/" aria-label="Instagram"><img src="img/ig.jpg"></a>
+			<a href="https://www.threads.com/polyfiremedia/" aria-label="Instagram"><img src="img/threads.jpg"></a>
+			<a href="https://x.com/polyfiremedia" aria-label="X"><img src="img/x.jpg"></a>
+		</div>
+	</main>
+
+	<div id="creditsModal" class="modal" aria-hidden="true">
+		<div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="credits-title">
+			<button class="modal-close" type="button" aria-label="Close credits">CLOSE</button>
+
+			<div class="credits-scroll">
+				<h2 id="credits-title" class="credits-title">
+					A GOOD <span>SAMARITAN</span>
+				</h2>
+
+				<p class="credits-subtitle">Cast &amp; Crew</p>
+
+				<div class="credit-list">
+					<div class="credit-role">Director</div>
+					<div class="credit-name">Ryan Stratton</div>
+
+					<div class="credit-role">Writer</div>
+					<div class="credit-name">John Smith</div>
+
+					<div class="credit-role">Producer</div>
+					<div class="credit-name">Jane Doe</div>
+
+					<div class="credit-role">Director of Photography</div>
+					<div class="credit-name">Alex Jones</div>
+
+					<div class="credit-role">Editor</div>
+					<div class="credit-name">Sarah Wilson</div>
+				</div>
+
+				<h3 class="credit-section">Cast</h3>
+
+				<div class="credit-list">
+					<div class="credit-role">Detective</div>
+					<div class="credit-name">John Smith</div>
+
+					<div class="credit-role">Good Samaritan</div>
+					<div class="credit-name">Jane Doe</div>
+
+					<div class="credit-role">Waitress</div>
+					<div class="credit-name">Emily Johnson</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const navToggle = document.querySelector(".nav-toggle");
+		const siteNav = document.getElementById("site-nav");
+		const modal = document.getElementById("creditsModal");
+		const creditsLink = document.getElementById("credits-link");
+		const modalClose = document.querySelector(".modal-close");
+
+		function closeMenu() {
+			siteNav.classList.remove("open");
+			navToggle.setAttribute("aria-expanded", "false");
+			navToggle.setAttribute("aria-label", "Open menu");
+		}
+
+		navToggle.addEventListener("click", () => {
+			const isOpen = siteNav.classList.toggle("open");
+			navToggle.setAttribute("aria-expanded", String(isOpen));
+			navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+		});
+
+		siteNav.querySelectorAll("a").forEach(link => {
+			link.addEventListener("click", closeMenu);
+		});
+
+		function openCredits() {
+			modal.classList.add("open");
+			modal.setAttribute("aria-hidden", "false");
+			document.body.classList.add("modal-open");
+			modalClose.focus();
+		}
+
+		function closeCredits() {
+			modal.classList.remove("open");
+			modal.setAttribute("aria-hidden", "true");
+			document.body.classList.remove("modal-open");
+			creditsLink.focus();
+		}
+
+		creditsLink.addEventListener("click", event => {
+			event.preventDefault();
+			openCredits();
+		});
+
+		modalClose.addEventListener("click", closeCredits);
+
+		modal.addEventListener("click", event => {
+			if (event.target === modal) closeCredits();
+		});
+
+		document.addEventListener("keydown", event => {
+			if (event.key === "Escape") {
+				if (modal.classList.contains("open")) closeCredits();
+				closeMenu();
+			}
+		});
+	</script>
+</body>
+</html>
