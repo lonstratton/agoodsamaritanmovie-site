@@ -489,13 +489,13 @@ a {
 .credits-scroll {
 	max-height: 88vh;
 	overflow-y: auto;
-	padding: 3rem 3rem 0 7rem;
+	padding: 5rem 3rem 1rem 7rem;
 }
 
 .credits-title {
 	margin: 0 0 .4rem;
 	text-align: left;
-	font-size: clamp(1.7rem, 4vw, 2.4rem);
+	font-size: clamp(2rem, 5vw, 3rem);
 	letter-spacing: .08em;
 	font-weight: 400;
 }
