@@ -40,7 +40,7 @@ a {
 
 .site-header {
 	position: relative;
-	width: min(85%, 3000px);
+	width: min(85%, 2500px);
 	margin: 0 auto;
 	padding: clamp(1.75rem, 4vw, 3.5rem) 0 1.25rem;
 	display: flex;
@@ -142,7 +142,7 @@ a {
 }
 
 .site-main {
-	width: min(85%, 3000px);
+	width: min(85%, 2500px);
 	margin: 0 auto;
 	padding-bottom: 3rem;
 }
@@ -196,7 +196,7 @@ a {
 
 .media-single {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .media-single .media-card {
