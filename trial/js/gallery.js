@@ -3,27 +3,33 @@ const imageModal = document.getElementById("imageModal");
 const lightboxImage = document.getElementById("lightboxImage");
 const lightboxCaption = document.getElementById("lightboxCaption");
 const imageClose = document.querySelector(".image-close");
-const galleryLinks = [...document.querySelectorAll(".gallery-item a")];
-
+let galleryLinks = [];
 let currentIndex = 0;
 
 const prevButton = document.querySelector(".lightbox-nav.prev");
 const nextButton = document.querySelector(".lightbox-nav.next");
 
-galleryLinks.forEach((link, index) => {
+document.querySelectorAll(".gallery-item a").forEach(link => {
 
     link.addEventListener("click", e => {
 
         e.preventDefault();
-        currentIndex = index;
-        console.log("Lightbox clicked");
 
-        showImage(index);
+        const gallery =
+            link.closest(".gallery-stills, .gallery-bts");
+
+        galleryLinks = [...gallery.querySelectorAll(".gallery-item a")];
+
+        currentIndex = galleryLinks.indexOf(link);
+
+        showImage(currentIndex);
 
         imageModal.classList.add("open");
         imageModal.setAttribute("aria-hidden", "false");
 
         document.body.classList.add("modal-open");
+
+        updateNavButtons();
 
         imageClose.focus();
 
@@ -47,27 +53,38 @@ function showImage(index) {
 
     lightboxCaption.textContent =
         caption ? caption.textContent : "";
+    
+    updateNavButtons();    
 }
 
 prevButton.addEventListener("click", () => {
 
-    currentIndex =
-        (currentIndex - 1 + galleryLinks.length) %
-        galleryLinks.length;
-
-    showImage(currentIndex);
+    if (currentIndex > 0) {
+		currentIndex--;
+		showImage(currentIndex);
+		updateNavButtons();
+	}
 
 });
 
 nextButton.addEventListener("click", () => {
 
-    currentIndex =
-        (currentIndex + 1) %
-        galleryLinks.length;
-
-    showImage(currentIndex);
+    if (currentIndex < galleryLinks.length - 1) {
+		currentIndex++;
+		showImage(currentIndex);
+		updateNavButtons();
+	}
 
 });
+
+function updateNavButtons() {
+
+    prevButton.disabled = (currentIndex === 0);
+
+    nextButton.disabled =
+        (currentIndex === galleryLinks.length - 1);
+
+}
 
 function closeImage() {
 
