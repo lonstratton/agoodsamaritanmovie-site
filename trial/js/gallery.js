@@ -16,7 +16,7 @@ document.querySelectorAll(".gallery-item a").forEach(link => {
         e.preventDefault();
 
         const gallery =
-            link.closest(".gallery-stills, .gallery-bts");
+  		  link.closest(".gallery-stills, .gallery-stills-v1, .gallery-bts");
 
         galleryLinks = [...gallery.querySelectorAll(".gallery-item a")];
 
