@@ -501,10 +501,6 @@ hr {
     right: .75rem;
 }
 
-.lightbox-nav:disabled {
-    display: none;
-}
-
 .credits-scroll {
 	max-height: 88vh;
 	overflow-y: auto;

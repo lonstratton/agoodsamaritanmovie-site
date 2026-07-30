@@ -29,8 +29,6 @@ document.querySelectorAll(".gallery-item a").forEach(link => {
 
         document.body.classList.add("modal-open");
 
-        updateNavButtons();
-
         imageClose.focus();
 
     });
@@ -53,38 +51,28 @@ function showImage(index) {
 
     lightboxCaption.textContent =
         caption ? caption.textContent : "";
-    
-    updateNavButtons();    
 }
 
 prevButton.addEventListener("click", () => {
 
-    if (currentIndex > 0) {
-		currentIndex--;
-		showImage(currentIndex);
-		updateNavButtons();
-	}
+    currentIndex =
+        (currentIndex - 1 + galleryLinks.length) %
+        galleryLinks.length;
+
+    showImage(currentIndex);
 
 });
 
 nextButton.addEventListener("click", () => {
 
-    if (currentIndex < galleryLinks.length - 1) {
-		currentIndex++;
-		showImage(currentIndex);
-		updateNavButtons();
-	}
+    currentIndex =
+        (currentIndex + 1) %
+        galleryLinks.length;
+
+    showImage(currentIndex);
 
 });
 
-function updateNavButtons() {
-
-    prevButton.disabled = (currentIndex === 0);
-
-    nextButton.disabled =
-        (currentIndex === galleryLinks.length - 1);
-
-}
 
 function closeImage() {
 
