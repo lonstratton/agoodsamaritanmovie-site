@@ -297,13 +297,34 @@ hr {
 }
 
 /*--------------------------------------------------------------
+    Footer
+--------------------------------------------------------------*/
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0 0 .5rem;
+}
+
+.footer-contact {
+    font-size: .9rem;
+    letter-spacing: .08em;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 300;
+}
+
+.footer-contact:hover {
+    color: #B20000;
+}
+/*--------------------------------------------------------------
     Social Links
 --------------------------------------------------------------*/
 .social-links {
     display: flex;
     justify-content: flex-end;
     gap: 1.2rem;
-    padding-top: 2rem;
 }
 
 .social {
@@ -624,6 +645,12 @@ hr {
 	.credits-scroll {
 		padding: 4rem 1.5rem 2rem;
 	}
+	
+    .site-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
 }
 
 @media (max-width: 400px) {
