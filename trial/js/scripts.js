@@ -102,3 +102,15 @@ document.addEventListener("keydown", e => {
     closeMenu();
 
 });
+
+const contact = document.getElementById("footer-contact");
+
+if (contact) {
+    const email = [
+        "ryanstrattonmusic",
+        "gmail.com"
+    ].join("@");
+
+    contact.href = `mailto:${email}`;
+    contact.textContent = "CONTACT";
+}
