@@ -104,8 +104,8 @@ document.addEventListener("keydown", e => {
     }
 
     if (videoModal && videoModal.classList.contains("open")) {
-    closeVideo();
-}
+		closeVideo();
+	}
 
     closeMenu();
 
