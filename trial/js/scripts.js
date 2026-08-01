@@ -107,7 +107,7 @@ const contact = document.getElementById("footer-contact");
 
 if (contact) {
     const email = [
-        "ryanstrattonmusic",
+        "polyfiremedia",
         "gmail.com"
     ].join("@");
 
