@@ -584,7 +584,7 @@ hr {
 @media (max-width: 600px) {
 	.site-header,
 	.site-main {
-		width: min(92%, 1100px);
+		width: 92%;
 	}
 	
 	.site-title {
