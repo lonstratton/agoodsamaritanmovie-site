@@ -201,6 +201,11 @@ hr {
     font-size: .88rem;
 }
 
+.genre span {
+    color: #B20000;
+    padding: 0 .35em;
+}
+
 .film-intro p {
     font-size: clamp(.82rem, 1.1vw, .96rem);
     line-height: 1.55;
@@ -474,6 +479,7 @@ hr {
     height:auto;
 	object-fit: contain;
     margin:auto;
+    border: 1px solid var(--line);
 }
 
 #lightboxCaption{
