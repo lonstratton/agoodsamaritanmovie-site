@@ -394,8 +394,7 @@ hr {
 	width: min(92vw, 760px);
 	max-height: 88vh;
 	overflow: hidden;
-	background:
-		url("../img/background_credits.jpg") center center / cover no-repeat fixed;
+	background-image: url("../img/background_credits.jpg");
 	border: 1px solid var(--line);
 	box-shadow: 0 20px 60px rgba(0,0,0,.65);
 }
