@@ -57,17 +57,21 @@ modal.addEventListener("click", e => {
 
 // ----- Video Modal -----
 
-document.querySelectorAll(".video-link").forEach(link => {
-    link.addEventListener("click", e => {
-        e.preventDefault();
+if (videoModal && videoFrame && videoClose) {
 
-        videoFrame.src = link.href + "?autoplay=1";
-        videoModal.classList.add("open");
-        videoModal.setAttribute("aria-hidden", "false");
-        document.body.classList.add("modal-open");
-        videoClose.focus();
+    document.querySelectorAll(".video-link").forEach(link => {
+        link.addEventListener("click", e => {
+            e.preventDefault();
+
+            videoFrame.src = link.href + "?autoplay=1";
+            videoModal.classList.add("open");
+            videoModal.setAttribute("aria-hidden", "false");
+            document.body.classList.add("modal-open");
+            videoClose.focus();
+        });
     });
-});
+
+}
 
 function closeVideo() {
     videoModal.classList.remove("open");
@@ -76,27 +80,45 @@ function closeVideo() {
     document.body.classList.remove("modal-open");
 }
 
-videoClose.addEventListener("click", closeVideo);
+if (videoClose) {
+    videoClose.addEventListener("click", closeVideo);
+}
 
-videoModal.addEventListener("click", e => {
-    if (e.target === videoModal) {
-        closeVideo();
-    }
-});
+if (videoModal) {
+    videoModal.addEventListener("click", e => {
+        if (e.target === videoModal) {
+            closeVideo();
+        }
+    });
+}
+
 
 // ----- Keyboard Shortcuts -----
 
 document.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
 
-        if (modal.classList.contains("open")) {
-            closeCredits();
-        }
+    if (e.key !== "Escape") return;
 
-        if (videoModal.classList.contains("open")) {
-            closeVideo();
-        }
-
-        closeMenu();
+    if (modal.classList.contains("open")) {
+        closeCredits();
     }
+
+    if (videoModal && videoModal.classList.contains("open")) {
+		closeVideo();
+	}
+
+    closeMenu();
+
 });
+
+const contact = document.getElementById("footer-contact");
+
+if (contact) {
+    const email = [
+        "polyfiremedia",
+        "gmail.com"
+    ].join("@");
+
+    contact.href = `mailto:${email}`;
+    contact.textContent = "CONTACT";
+}
