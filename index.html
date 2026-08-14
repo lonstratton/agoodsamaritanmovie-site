@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>A GOOD SAMARITAN | Short Film</title>
-	<meta name="description" content="Official website for A GOOD SAMARITAN, a neo-noir detective thriller directed by Ryan Stratton.">
+	<meta name="description" content="Official website for A GOOD SAMARITAN, a contemporary film noir short directed by Ryan Stratton.">
 	<meta name="robots" content="index,follow">
 	<meta name="author" content="Polyfire Media">
 	<meta name="theme-color" content="#000000">
@@ -21,7 +21,7 @@
 	<!-- Open Graph -->
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="A GOOD SAMARITAN">
-	<meta property="og:description" content="Official website for A GOOD SAMARITAN, a neo-noir detective thriller directed by Ryan Stratton.">
+	<meta property="og:description" content="Official website for A GOOD SAMARITAN, a contemporary film noir short directed by Ryan Stratton.">
 	<meta property="og:url" content="https://agoodsamaritanmovie.com/">
 	<meta property="og:image" content="https://agoodsamaritanmovie.com/img/og.jpg">
 	<meta property="og:site_name" content="A GOOD SAMARITAN">
@@ -29,7 +29,7 @@
 	<!-- X / Twitter -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="A GOOD SAMARITAN">
-	<meta name="twitter:description" content="Official website for A GOOD SAMARITAN, a neo-noir detective thriller directed by Ryan Stratton.">
+	<meta name="twitter:description" content="Official website for A GOOD SAMARITAN, a contemporary film noir short directed by Ryan Stratton.">
 	<meta name="twitter:image" content="https://agoodsamaritanmovie.com/img/og.jpg">
 	<meta name="twitter:site" content="@polyfiremedia">
 	<meta name="twitter:creator" content="@polyfiremedia">
@@ -59,7 +59,7 @@
 	<main class="site-main">
 	<section id="film" class="featured-video" aria-label="A Good Samaritan film">
 		<div class="video-frame">
-			<iframe src="https://player.vimeo.com/video/1210309892?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="A Good Samaritan | Official Trailer"></iframe>
+			<iframe src="https://player.vimeo.com/video/1212208625?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="A Good Samaritan | &quot;Crime Scene&quot;"></iframe>
 		</div>
 	</section>
 	<section class="film-intro" aria-label="film-title">
@@ -77,6 +77,15 @@
 			Starring <strong>Chris Newman, Julie Kline,</strong> and <strong>Dan Pesta</strong> 
 		</p>
 	</section>
+	<section class="media-grid" aria-label="Trailer and film clip">
+		<article id="trailer" class="media-card">
+			<a href="https://player.vimeo.com/video/1210309892" class="video-link" aria-label="Play official trailer"> 
+			<div class="media-frame">
+				<img src="img/trailer.jpg" alt="Official trailer for A GOOD SAMARITAN"> 
+			</div>
+			</a> 
+		</article>
+	</section>
 	<hr>
 	<footer class="site-footer">
   	  <a href="#" id="footer-contact" class="footer-contact"></a>
@@ -84,11 +93,11 @@
 			<a href="https://www.facebook.com/profile.php?id=100090668301949" class="social" target="_blank" rel="noopener noreferrer"> <img src="img/fb.jpg" alt="Facebook" class="icon normal"> <img src="img/fb-red.jpg" alt="Facebook" class="icon hover"> </a> <a href="https://www.instagram.com/polyfiremedia/" class="social" target="_blank" rel="noopener noreferrer"> <img src="img/ig.jpg" alt="Instagram" class="icon normal"> <img src="img/ig-red.jpg" alt="" class="icon hover"> </a> <a href="https://www.threads.com/@polyfiremedia/" class="social" target="_blank" rel="noopener noreferrer"> <img src="img/threads.jpg" alt="Threads" class="icon normal"> <img src="img/threads-red.jpg" alt="" class="icon hover"> </a> <a href="https://x.com/polyfiremedia" class="social" target="_blank" rel="noopener noreferrer"> <img src="img/x.jpg" alt="X" class="icon normal"> <img src="img/x-red.jpg" alt="" class="icon hover"> <img src="img/x.jpg" alt="X" class="icon normal"> <img src="img/x-red.jpg" alt="" class="icon hover"> <a href="https://www.imdb.com/title/tt43810252/" class="social" target="_blank"><img src="img/imdb.jpg" alt="IMDb" class="icon normal"> <img src="img/imdb-red.jpg" alt="IMDb" class="icon hover"> </a>  
 		</nav>
 	</footer>
-	</main>
+	</main>		
 
 	<!-- =========================================================
      CREDITS MODAL
-    ========================================================= -->
+========================================================= -->
 	<div id="creditsModal" class="modal" aria-hidden="true">
 		<div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="credits-title">
 			<button class="modal-close" type="button" aria-label="Close credits">CLOSE</button>
@@ -253,7 +262,23 @@
 		</div>
 	</div>
 	<!-- End Credits Modal -->
+	
+<div id="videoModal" class="modal" aria-hidden="true">
+    <div class="modal-content video-modal-content">
+        <button class="modal-close video-close"
+                type="button"
+                aria-label="Close video">CLOSE</button>
 
+        <div class="video-frame">
+            <iframe
+                id="videoFrame"
+                src=""
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
 <script src="js/scripts.js"></script>
 </body>
 </html>
